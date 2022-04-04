@@ -2,5 +2,6 @@
     <string name="app_name">Emmas App</string>
     <string name="action_external_web">External Web Page</string>
     <string name="action_internal_web">Internal Web Page</string>
+    <string name="tredje_sidan">Traktor!</string>
     <string name="hello_msg">God Morgon!</string>
 </resources>

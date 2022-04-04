@@ -12,4 +12,9 @@
         android:orderInCategory="110"
         android:title="@string/action_internal_web"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/min_egna_hemsida"
+        android:orderInCategory="120"
+        android:title="@string/tredje_sidan"
+        app:showAsAction="never"/>
 </menu>
