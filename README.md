@@ -39,7 +39,7 @@ Jag skapade en html-sida under en ny map (assets -> about.html) och skapade två
         myWebView.loadUrl("file:///android_asset/about.html");
     }
 ```
-Beroende på vilken menyalternativ användaren har tryckt på så kommer denna funktion validera vilken funktion som ska starta (som ses i koden ovan).
+Koden nedan förklarar hur, beroende på vilken menyalternativ användaren har tryckt på så kommer denna funktion validera vilken funktion som ska starta (som ses i koden ovan).
 ```
 public boolean onOptionsItemSelected(MenuItem item) {
     int id = item.getItemId();
@@ -55,7 +55,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
     }
 ```
 Skärmbilder från den externa hemsidan och den interna.
-Externa hemsidan:
+Extern hemsidan:
 ![](external.png)
 Intern hemsida:
 ![](internal.png)
