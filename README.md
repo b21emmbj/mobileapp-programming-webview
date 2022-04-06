@@ -1,29 +1,23 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+ I denna uppgift har jag ändrat appens namn i filen string.xml.
 
-_Du kan ta bort all text som finns sedan tidigare_.
+ För att tillåta appen att använda internet så implementerades kod som gjorde detta möjligt;
+ ```
+    <uses-permission android:name="android.permission.INTERNET" />
+ ```
 
-## Följande grundsyn gäller dugga-svar:
-
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
-
-
+Följdaktligen skapade jag en Webview-variabel i filen "content_main.xml" och tilldelade den ett ID;
 ```
    <WebView
         android:id="@+id/my_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 ```
-Kod för att skapa ett Webview-element med ett ID
 
-
+I koden nedan så deklarerar jag först en variabel av typen "Webview".
+För att koppla en aktivitet till komponenten så används "findViewById" där jag sätter till att vara idet som jag gav min Webview-element.
 ```
 public class MainActivity extends AppCompatActivity {
     WebView myWebView;
@@ -36,15 +30,17 @@ public class MainActivity extends AppCompatActivity {
         myWebView.setWebViewClient(new WebViewClient());
 ```
 
+Jag skapade en html-sida och skapade två funktioner som gör så att två olika hemsidor öppnas.
 ```
-public class MainActivity extends AppCompatActivity {
+    public void showExternalWebPage(){
+        myWebView.loadUrl("https://www.his.se/");
+    }
     public void showInternalWebPage(){
         myWebView.loadUrl("file:///android_asset/about.html");
     }
-    public void showmin_egna_hemsida(){
-        myWebView.loadUrl("https://wwwlab.iit.his.se/b21emmbj/webbplats/SVG/");
-    }
-    ...
+```
+Beroende på vilken menyalternativ användaren har tryckt på så kommer denna funktion validera vilken funktion som ska starta (som ses i koden ovan)
+```
       public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
             if (id == R.id.action_external_web) {
@@ -58,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
 ```
+Skärmbilder från den externa hemsidan och den interna.
 Externa hemsidan:
 ![](external.png)
 Intern hemsida:
