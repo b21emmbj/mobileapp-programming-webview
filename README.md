@@ -3,7 +3,7 @@
 
  I denna uppgift har jag ändrat appens namn i filen string.xml.
 
- För att tillåta appen att använda internet så implementerades kod som gjorde detta möjligt;
+ För att tillåta appen att använda internet så implementerades kod som gjorde detta möjligt i filen AndroidManifest.xml;
  ```
     <uses-permission android:name="android.permission.INTERNET" />
  ```
